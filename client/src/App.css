@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
+
+.nav-container {
+  color: black;
+  background-color: white;
+  font-family: 'Lexend Tera', sans-serif;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: solid 1px rgba(85, 85, 85, 0.404);
+}
+
+.socials img {
+  width: 35px;
+  height: 35px;
+  margin-left: 20px;
+}
+
+.nav-logo img {
+  width: 160px;
+  height: 180px;
+}
