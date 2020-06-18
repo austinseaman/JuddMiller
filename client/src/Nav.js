@@ -8,14 +8,12 @@ export default function Nav() {
     return (
         <div className="nav-container">
             <span className='nav-logo'>
-                <Link to='/'>
-                    <img src={Main} alt="wolf-logo"/>
-                </Link>
+                <img src={Main} alt="wolf-logo"/>
             </span>
             <span>
                 <h1>Judd Lucius Miller</h1>
                 <h5>Artist at Misery & Co. Tattoo Collective</h5>
-                <h5> Home | Merch | Contact | Cart</h5>
+                <h5> <Link to ='/'>Home</Link> | <Link to ='/merch'>Merch</Link> | <Link to ='/portfolio'>Portfolio</Link> | <Link to ='/contact'>Contact</Link> | <Link to ='/cart'>Cart</Link></h5>
             </span>
             {/* <h1>Judd Lucius Miller </h1> */}
             <span className="socials">
