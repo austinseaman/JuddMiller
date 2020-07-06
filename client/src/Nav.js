@@ -11,11 +11,10 @@ export default function Nav() {
                 <img src={Main} alt="wolf-logo"/>
             </span>
             <span>
-                <h1>Judd Lucius Miller</h1>
+                <h1>† Judd Lucius Miller †</h1>
                 <h5>Artist at Misery & Co. Tattoo Collective</h5>
                 <h5> <Link to ='/'>Home</Link> | <Link to ='/merch'>Merch</Link> | <Link to ='/portfolio'>Portfolio</Link> | <Link to ='/contact'>Contact</Link> | <Link to ='/cart'>Cart</Link></h5>
             </span>
-            {/* <h1>Judd Lucius Miller </h1> */}
             <span className="socials">
                 <a href="https://www.instagram.com/juddluciusmiller/">
                     <img src={Insta} alt="instagram-logo"/>
