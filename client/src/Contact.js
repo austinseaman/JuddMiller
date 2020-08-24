@@ -19,6 +19,10 @@ export default function Contact() {
                     placeholder="Please detail the work you'd like done
                                 or any questions you may have...">
                 </textarea>
+                <h5>URL for reference photo:</h5>
+                <input type="url" placeholder="www.example.com"/>
+                <br/>
+                <br/>
             </form>
             <button>Submit</button>
         </div>
