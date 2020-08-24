@@ -1,8 +1,8 @@
 const mongoose = require("mongoose")
 const Schema = mongoose.Schema
 
-const aboutSchema = new Schema({
-    aboutText: {
+const bioSchema = new Schema({
+    bioText: {
         required: true,
         type: String,
     },
@@ -12,4 +12,4 @@ const aboutSchema = new Schema({
     }
 })
 
-module.exports = mongoose.model("About", aboutSchema)
+module.exports = mongoose.model("Bio", bioSchema)
