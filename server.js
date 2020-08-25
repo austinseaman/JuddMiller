@@ -3,14 +3,14 @@ const app = express()
 const morgan = require("morgan")
 const mongoose = require("mongoose")
 const expressJwt = require("express-jwt")
-const PORT = process.env.PORT || 7000
+const PORT = process.env.PORT || 8080
 const path = require("path")
 require("dotenv").config()
 
 app.use(express.json())
 app.use(morgan("dev"))
 
-mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/DJBentley?retryWrites=true&w=majority',
+mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/JuddLuciusMiller?retryWrites=true&w=majority',
     {
         useNewUrlParser: true,
         useFindAndModify: true,
@@ -20,7 +20,8 @@ mongoose.connect('mongodb+srv://apseaman0:Coron%4012@cluster0-k9haj.mongodb.net/
 
 // Routes
 app.use("/auth", require("./routes/authRouter"))
-app.use("/api", expressJwt({ secret: process.env.SECRET }))
+app.use("/api", expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
+app.use("/info", require("./routes/infoRouter"))
 app.use("/api/bio", require("./routes/bioRouter"))
 app.use(express.static(path.join(__dirname, "client", "build")))
 

@@ -1,9 +1,13 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { Link } from 'react-router-dom'
 import Insta from './assets/instagram.svg'
 import Facebook from './assets/facebook.svg'
+import { UserContext } from './context/userProvider'
 
 const Nav = (props) => {
+    const { token, logout } = useContext(UserContext)
+
+
     return (
         <div className="nav-container">
             {/* <span className='nav-logo'>
@@ -43,7 +47,7 @@ const Nav = (props) => {
             <br/>
             <br/>
             <span className='footer-text'>
-                <Link to ='/admin'>Admin</Link>
+                {token ? <Link onClick={logout}>Logout</Link> : <Link to ='/admin'>Admin</Link>}
                 <p>©Judd Lucius Miller 2020 || Austin Seaman 2020</p>
             </span>
         </div>
