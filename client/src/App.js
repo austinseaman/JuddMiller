@@ -9,7 +9,6 @@ import Cart from './Cart'
 import Login from './Login'
 import Portfolio from './Portfolio'
 import './App.css'
-import { UserContext } from './context/userProvider'
 
 const App = () => {
 

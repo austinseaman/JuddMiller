@@ -24,7 +24,7 @@ export default function Contact() {
                 <br/>
                 <br/>
             </form>
-            <button>Submit</button>
+            <button className="btn">Submit</button>
         </div>
     )
 }

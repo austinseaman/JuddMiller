@@ -43,7 +43,7 @@ const Bio = () => {
                         <div className="editBio">
                             <textarea value={newBioText} onChange={handleChange} name="about" id="aboutMe" cols="30" rows="10">{bioData[0].bioText}</textarea>
                             <br/>
-                            <button className="btn2" onClick={handleUpdate}>Save</button>
+                            <button className="btn" onClick={handleUpdate}>Save</button>
                         </div>
                         :
                         <div>

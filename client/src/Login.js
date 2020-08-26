@@ -47,7 +47,7 @@ const Login = () => {
                 />
                 <p>{authErrMsg}</p>
 
-                <button onClick={handleSubmit}>Log In</button>
+                <button onClick={handleSubmit} className="btn">Log In</button>
             </form>
             <br/>
             { token && <p>nice</p> }
