@@ -47,7 +47,7 @@ const Bio = () => {
                         </div>
                         :
                         <div>
-                            <h4>{bioData[0].bioText}</h4>
+                            <h3>{bioData[0].bioText}</h3>
                         </div>}
                     </>
                 }

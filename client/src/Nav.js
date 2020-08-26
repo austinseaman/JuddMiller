@@ -17,15 +17,15 @@ const Nav = (props) => {
                 <h1>Judd Lucius Miller</h1>
                 <h5>Artist at Misery & Co. Tattoo Collective</h5>
                 <h2>
-                    <Link to ='/merch'>| Merch</Link>  
+                    <Link to ='/merch'>Merch</Link>  
                     <br/>
-                    <Link to ='/portfolio'>| Portfolio</Link> 
+                    <Link to ='/portfolio'>Portfolio</Link> 
                     <br />
-                    <Link to ='/bio'>| Bio</Link>
+                    <Link to ='/bio'>Bio</Link>
                     <br />
-                    <Link to ='/contact'>| Contact</Link> 
+                    <Link to ='/contact'>Contact</Link> 
                     <br/>
-                    <Link to ='/cart'>| Cart</Link>
+                    <Link to ='/cart'>Cart</Link>
                 </h2>
             </span>
             <br/>
@@ -48,7 +48,7 @@ const Nav = (props) => {
             <br/>
             <span className='footer-text'>
                 {token ? <Link onClick={logout}>Logout</Link> : <Link to ='/admin'>Admin</Link>}
-                <p>©Judd Lucius Miller 2020 || Austin Seaman 2020</p>
+                <p>©Judd Lucius Miller 2020  ©Austin Seaman 2020</p>
             </span>
         </div>
     )

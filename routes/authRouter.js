@@ -39,7 +39,7 @@ authRouter.post("/login", (req, res, next) => {
 
         if (!user) {
             res.status(400)
-            return next(new Error("The username or password does not match our records!"))
+            return next(new Error("The username or password does not match our records."))
         }
 
         user.checkPassword(req.body.password, (err, isMatch) => {
