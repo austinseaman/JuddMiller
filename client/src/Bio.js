@@ -28,6 +28,13 @@ const Bio = () => {
         editBio(newBioText, bioData[0]._id)
         alert`Bio successfully updated. :)`
     }
+
+    const taStyles = {
+        fontSize: '20px',
+        width: '800px',
+        height: '400px',
+        overflow: 'hidden'
+    }
     
     return (
         <div className='bio'>
@@ -41,7 +48,7 @@ const Bio = () => {
                     <>
                         {token ? 
                         <div className="editBio">
-                            <textarea value={newBioText} onChange={handleChange} name="about" id="aboutMe" cols="30" rows="10">{bioData[0].bioText}</textarea>
+                            <textarea value={newBioText} onChange={handleChange} name="about" id="aboutMe" style={taStyles}>{bioData[0].bioText}</textarea>
                             <br/>
                             <button className="btn" onClick={handleUpdate}>Save</button>
                         </div>

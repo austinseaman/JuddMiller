@@ -163,12 +163,17 @@ input[type=email],
 input[type=url],
 input[type=password],
 textarea {
+  margin: 4px;
   font-family: 'Lexend Tera', sans-serif;
   border: 0;
   border-bottom: 2px solid black;
   background-color: #e8e8e8;
   resize: none;
   text-align: center;
+}
+
+input[type=radio] {
+  margin-left: 16px;
 }
 
 .btn {
