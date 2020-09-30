@@ -10,9 +10,9 @@ body {
   position: fixed;
   height: 100vh;
   width: 190px;
-  background-color: #020204;
+  background-color: #F7F7F5;
   font-family: 'Lexend Tera', sans-serif;
-  color: burlywood;
+  color: #46413B;
   /*
   text-align: center;
   display: flex;
@@ -23,7 +23,7 @@ body {
 
 .nav-container a {
   text-decoration: none;
-  color: burlywood;
+  color: #46413B;
 }
 
 .nav-container a:hover {
@@ -59,7 +59,7 @@ svg:hover{
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #020204;
+  background-color: #F7F7F5;
 }
 
 .splash h1 {
