@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Lexend+Tera&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grenze+Gotisch&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Raleway:wght@200&display=swap');
 
 body {
   background-color: #F7F7F5;
@@ -11,7 +12,7 @@ body {
   height: 100vh;
   width: 190px;
   background-color: #F7F7F5;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   /*
   text-align: center;
@@ -27,7 +28,7 @@ body {
 }
 
 .nav-container a:hover {
-  color: #F7F7F5;
+  color: #9c9c9c;
 }
 svg {
   height: 25px;
@@ -66,7 +67,7 @@ svg:hover{
   writing-mode: vertical-rl;
   text-orientation: mixed;
   color: whitesmoke;
-  font-family:'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .splash-img {
@@ -88,7 +89,7 @@ svg:hover{
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   margin-left: 175px;
 }
@@ -108,7 +109,7 @@ margin-right: 25px;
   flex-direction: column;
   align-items: center;
   text-align: center;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   margin-left: 175px;
 }
@@ -119,7 +120,7 @@ margin-right: 25px;
   align-items: center;
   justify-content: center;
   text-align: center;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   margin-left: 175px;
 }
@@ -128,7 +129,7 @@ margin-right: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   margin-left: 175px;
 }
@@ -137,7 +138,7 @@ margin-right: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   margin-left: 175px;
 }
@@ -153,7 +154,7 @@ margin-right: 25px;
   display: flex;
   flex-direction: column;
   align-items: center;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   color: #46413B;
   margin-left: 175px;
 }
@@ -164,7 +165,7 @@ input[type=url],
 input[type=password],
 textarea {
   margin: 4px;
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
   border: 0;
   border-bottom: 2px solid black;
   background-color: #e8e8e8;
@@ -199,7 +200,7 @@ input[type=radio] {
   border: 1px solid var(--border-color-normal);
   border-radius: var(--border-radius); 
   color: var(--text-color-normal);
-  font-family: 'Lexend Tera', sans-serif;
+  font-family: 'Raleway', sans-serif;
 }
 
 .btn:focus {

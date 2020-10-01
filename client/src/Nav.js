@@ -14,21 +14,20 @@ const Nav = (props) => {
                 <img src={Main} alt="wolf-logo"/>
             </span> */}
             <span>
-                <h1>Judd Lucius Miller</h1>
+                <h1>JUDD LUCIUS MILLER</h1>
                 <h5>Artist at Misery & Co. Tattoo Collective</h5>
                 <h2>
-                    <Link to ='/merch'>Merch</Link>  
+                    <Link to ='/merch'>MERCH</Link>  
                     <br/>
-                    <Link to ='/portfolio'>Portfolio</Link> 
+                    <Link to ='/portfolio'>PORTFOLIO</Link> 
                     <br />
-                    <Link to ='/bio'>Bio</Link>
+                    <Link to ='/bio'>BIO</Link>
                     <br />
-                    <Link to ='/contact'>Contact</Link> 
+                    <Link to ='/contact'>CONTACT</Link> 
                     <br/>
-                    <Link to ='/cart'>Cart</Link>
+                    <Link to ='/cart'>CART</Link>
                 </h2>
             </span>
-            <br/>
             <br/>
             <br/>
             <br/>
