@@ -15,7 +15,7 @@ const Nav = (props) => {
             </span> */}
             <span>
                 <h1>JUDD LUCIUS MILLER</h1>
-                <h5>Artist at Misery & Co. Tattoo Collective</h5>
+                <h5>Tattoo Artist ◦ Salt Lake City, UT</h5>
                 <h2>
                     <Link to ='/merch'>MERCH</Link>  
                     <br/>
@@ -35,6 +35,7 @@ const Nav = (props) => {
             <br/>
             <br/>
             <br/>
+            <br/>
             <span className="socials">
                 <a href="https://www.instagram.com/juddluciusmiller/">
                     <img src={Insta} alt="instagram-logo"/>
@@ -47,7 +48,7 @@ const Nav = (props) => {
             <br/>
             <span className='footer-text'>
                 {token ? <Link onClick={logout}>Logout</Link> : <Link to ='/admin'>Admin</Link>}
-                <p>©Judd Lucius Miller 2020  ©Austin Seaman 2020</p>
+                <p>©Judd Lucius Miller 2020 <br/> ©Austin Seaman 2020</p>
             </span>
         </div>
     )

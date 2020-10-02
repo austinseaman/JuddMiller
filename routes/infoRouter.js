@@ -15,4 +15,7 @@ infoRouter.get('/bio', (req, res, next) => {
     })
 })
 
+// Merch
+
+
 module.exports = infoRouter
