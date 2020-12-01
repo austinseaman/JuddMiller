@@ -1,26 +1,22 @@
 import React from 'react'
+import Calendar from 'react-calendar'
+import 'react-calendar/dist/Calendar.css';
 
 export default function Contact() {
     return (
-        <div className='booking'>
+        <div className='main-book'>
             <h1>Booking & Contact</h1>
+            <div className='booking'>
             <form name="booking-form" className='booking-form'>
                 <input type="text" placeholder="Your Name" />
-                <br />
+                
                 <input type="email" placeholder="Email Address" />
                 <br />
                 <input type="text" placeholder="Size of Tattoo (inches)" />
                 <input type="text" placeholder="Location on body" />
                 <br />
-                {/* Figure out how the hell to make sure one radio button unchecks when
-                    new radio button is checked, as well as how to uncheck one. */}
                 <input type="checkbox" name="bng" value="black-n-grey"/><b>Black and Grey</b>
                 <input type="checkbox" name="color" value="color"/><b>Color</b>
-                {/* <select name="color" id="">
-                    <option value="none" selected disabled hidden>Select a Color</option>
-                    <option value="">Black and Grey</option>
-                    <option value="">Full Color</option>
-                </select> */}
                 <br />
                 <textarea
                     name="description"
@@ -36,7 +32,11 @@ export default function Contact() {
                 <input type="url" placeholder="www.example.com" />
 
             </form>
-            <button className="btn">Submit</button>
+            <Calendar />
+            
         </div>
+        <button className="btn">Submit</button>
+        </div>
+        
     )
 }
