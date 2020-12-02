@@ -50,6 +50,7 @@ const UserProvider = (props) => {
         })
     }
 
+    //Get all data for non admin users
     const getData = () => {
         axios.get('/info/bio')
             .then(res => {
@@ -64,7 +65,7 @@ const UserProvider = (props) => {
     }
 
     
-
+    // Bio management for admin user
     const deleteBio = (id) => {
         userAxios.delete(`/api/bio/${id}`)
             .then(res => {
@@ -100,6 +101,49 @@ const UserProvider = (props) => {
         .catch(err => console.log(err))
     }
 
+    // Merchandise management for admin user
+    // Decide if you need a 'get one' request, and create individual product component, if so..
+    const deleteProduct = (id) => {
+        userAxios.delete(`/api/merch/${id}`)
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    merchData: dataState.merchData.filter(product => product._id !== id)
+                }))
+            })
+            .catch(err => console.log(err.response.data.errMsg))
+    }
+
+    
+    const addProduct = (newName, newImg, newDesc, newPrice) => {
+        const newProduct = {
+            merchName: newName,
+            merchImg: newImg,
+            merchDesc: newDesc,
+            merchPrice: newPrice
+        }
+        userAxios.post('/api/merch', newProduct)
+            .then(res => {
+                getData()
+            })
+            .catch(err => console.log(err))
+    }
+
+    const editProduct = (nameEdit, imgEdit, descEdit, priceEdit, id) => {
+        const updatedProduct = {
+            merchName: nameEdit,
+            merchImg: imgEdit,
+            merchDesc: descEdit,
+            merchPrice: priceEdit
+        }
+        userAxios.put(`/api/merch/${id}`, updatedProduct)
+        .then(res => {
+            console.log(res.data, 'Product Successfully Updated')
+            getData()
+        })
+        .catch(err => console.log(err))
+    }
+
     return (
         <UserContext.Provider
             value={{
@@ -112,7 +156,10 @@ const UserProvider = (props) => {
                 dataState: dataState,
                 editBio: editBio,
                 deleteBio: deleteBio,
-                addBio: addBio
+                addBio: addBio,
+                deleteProduct: deleteProduct,
+                addProduct: addProduct,
+                editProduct: editProduct
             }}>
             {props.children}
         </UserContext.Provider>

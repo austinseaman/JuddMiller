@@ -8,11 +8,15 @@ const merchSchema = new Schema({
     },
     merchImg: {
         required: true,
-        type: URL
+        type: String
     },
     merchDesc: {
         required: true,
         type: String,
+    },
+    merchPrice: {
+        required: true,
+        type: Number
     }
 })
 

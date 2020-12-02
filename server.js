@@ -23,6 +23,7 @@ app.use("/auth", require("./routes/authRouter"))
 app.use("/api", expressJwt({ secret: process.env.SECRET, algorithms: ['HS256'] }))
 app.use("/info", require("./routes/infoRouter"))
 app.use("/api/bio", require("./routes/bioRouter"))
+app.use("/api/merch", require("./routes/merchRouter"))
 app.use(express.static(path.join(__dirname, "client", "build")))
 
 

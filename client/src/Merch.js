@@ -1,4 +1,5 @@
-import React from 'react'
+import React, {useContext, useState, useEffect} from 'react'
+import { UserContext } from './context/userProvider'
 
 export default function Merch() {
     return (
