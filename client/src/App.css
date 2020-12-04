@@ -132,6 +132,16 @@ margin-right: 25px;
   margin-left: 175px;
 }
 
+.products {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+}
+
+.product-card > img {
+  width: 250px;
+  height: 200px;
+}
+
 .portfolio-main {
   display: flex;
   flex-direction: column;

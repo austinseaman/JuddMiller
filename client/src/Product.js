@@ -22,11 +22,12 @@ const Product = (props) => {
                 <p>Loading..</p>
             </div> :
             <>
-            <div>
-                <h1>{merchName}</h1>
-                {/* <img src={merchImg}></img> */}
+            <div className="product-card">
+                <img src={merchImg}></img>
+                <h3>{merchName}</h3>
                 <p>{merchDesc}</p>
-                <p>{merchPrice}</p>
+                <p>${merchPrice}</p>
+                <button className='btn'>Buy Now</button>
             </div> 
             </>
         }

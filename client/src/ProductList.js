@@ -19,7 +19,7 @@ const ProductList = () => {
     })
     
     return (
-        <div>
+        <div className="products">
             {mappedProducts}
         </div>
     )
