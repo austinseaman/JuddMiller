@@ -1,10 +1,14 @@
-import React, {useContext, useState, useEffect} from 'react'
-import { UserContext } from './context/userProvider'
+import React from 'react'
+import ProductList from './ProductList'
 
-export default function Merch() {
+const Merch = () => {
+
     return (
         <div className='merch-main'>
             <h1>Merch</h1>
+            <ProductList />
         </div>
     )
 }
+
+export default Merch

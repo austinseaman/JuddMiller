@@ -19,7 +19,8 @@ const UserProvider = (props) => {
     const [userState, setUserState] = useState(initState)
 
     const [dataState, setDataState] = useState({
-        bioData: []
+        bioData: [],
+        merchData: []
     })
 
     const login = credentials => {
@@ -61,6 +62,13 @@ const UserProvider = (props) => {
             })
             .catch(err => {
                 console.log(err)
+            })
+        axios.get('/info/merch')
+            .then(res => {
+                setDataState(prevData => ({
+                    ...prevData,
+                    merchData: res.data
+                }))
             })
     }
 
