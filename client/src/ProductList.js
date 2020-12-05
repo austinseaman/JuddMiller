@@ -11,6 +11,7 @@ const ProductList = () => {
 
     const mappedProducts = merchData.map(product => {
         return <Product key={product._id}
+                        id={product._id}
                         merchName={product.merchName}
                         merchImg={product.merchImg}
                         merchDesc={product.merchDesc}

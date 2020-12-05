@@ -1,16 +1,8 @@
-import React, { useState } from 'react'
-import Calendar from 'react-calendar'
-import 'react-calendar/dist/Calendar.css';
+import React from 'react'
 import Header from './assets/juddContactHeader.jpg'
 
 export default function Contact() {
-    // const [date, setDate] = useState()
-
-    // const datePicked = (value) => {
-    //     let date = 
-    //     setDate(value)
-    // }
-
+    
     return (
         <div className='main-book'>
             {/* <h1>Booking & Contact</h1> */}
@@ -39,7 +31,7 @@ export default function Contact() {
                     </textarea>
                     <br/>
                     <br/>
-                    <b>Reference photos:</b>
+                    <b>Reference Photos:</b>
                     <br/>
                     <input type="file"/>
                     <br/>
@@ -48,7 +40,6 @@ export default function Contact() {
                     <input type="file"/>
                 </form>
                 <img src={Header} width="400px" height="320px"alt=""/>
-            {/* <Calendar onClickDay={datePicked} /> */}
             </div>
             <button className="btn">Submit</button>
         </div>

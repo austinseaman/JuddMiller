@@ -137,10 +137,9 @@ const UserProvider = (props) => {
             .catch(err => console.log(err))
     }
 
-    const editProduct = (nameEdit, imgEdit, descEdit, priceEdit, id) => {
+    const editProduct = (nameEdit, descEdit, priceEdit, id) => {
         const updatedProduct = {
             merchName: nameEdit,
-            merchImg: imgEdit,
             merchDesc: descEdit,
             merchPrice: priceEdit
         }
