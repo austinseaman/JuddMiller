@@ -1,4 +1,4 @@
-import React, {Component, useContext, useEffect} from 'react'
+import React, { useContext, useEffect } from 'react'
 import { UserContext } from './context/userProvider'
 import Product from './Product'
 
