@@ -17,12 +17,17 @@ const Product = (props) => {
     let {id, merchName, merchImg, merchDesc, merchPrice} = props
 
     const handleChange = (e) => {
-        setMerchInfo({merchName: e.target.value, merchDesc: e.target.value, merchPrice: e.target.value})
-        console.log(merchInfo)
+        setMerchInfo({...merchInfo, merchName: e.target.value})
+    }
+    const handleChange2 = (e) => {
+        setMerchInfo({...merchInfo, merchDesc: e.target.value})
+    }
+    const handleChange3 = (e) => {
+        setMerchInfo({...merchInfo, merchPrice: e.target.value})
     }
     const editClick = () => {
-        // editProduct(merchInfo, id) 
-        console.log(id)
+        editProduct(merchInfo.merchName, merchInfo.merchDesc, merchInfo.merchPrice, id)
+        alert`Product successfully updated, log out to verify changes.`
     }
     
 // When an end user adds an item to cart, setItem in local storage, getItem from local storage on cart page.
@@ -46,8 +51,8 @@ const Product = (props) => {
                     <div className="product-card">
                         <img src={merchImg}></img>
                         <input type="text" placeholder="Name" onChange={handleChange}/>
-                        <input type="text" placeholder="Product Description"/>
-                        <input type="number" placeholder="0" style={numStyle}/>
+                        <input type="text" placeholder="Product Description" onChange={handleChange2}/>
+                        <input type="number" placeholder="0" style={numStyle} onChange={handleChange3}/>
                         <div className="prod-btn">
                             <button className="btn" onClick={editClick}>Save</button>
                     </div>
