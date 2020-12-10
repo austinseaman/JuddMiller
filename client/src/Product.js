@@ -5,6 +5,7 @@ const Product = (props) => {
     const [loader, setLoader] = useState('Loading')
     const { token, editProduct, dataState: {merchData} } = useContext(UserContext)
     const [merchInfo, setMerchInfo] = useState({merchName: '', merchDesc: '', merchPrice: 0})
+    const [cart, setCart] = useState([])
 
     useEffect(() => {
         if(merchData === undefined){
@@ -31,11 +32,24 @@ const Product = (props) => {
     }
     
 // When an end user adds an item to cart, setItem in local storage, getItem from local storage on cart page.
-// Set up what this page looks like with a token
 
-    // const addClick = (product) => {
-    //     localStorage.setItem(product)
-    // }
+    const addClick = (product) => {
+        let cartCopy = [...cart]
+        let {id} = product
+        let existingProd = cartCopy.find(cartProd => cartProd.id === id)
+
+        if(existingProd) {
+            existingProd.quantity += product.quantity
+        } else {
+            cartCopy.push(product)
+        }
+
+        setCart(cartCopy)
+
+        let strungCart = JSON.stringify(cartCopy)
+        localStorage.setItem("cart", strungCart)
+    }
+
     const numStyle = {
         width: '50px'
     }
@@ -49,20 +63,13 @@ const Product = (props) => {
                 <>
                     {token ?
                     <div className="product-card">
-                        <img src={merchImg}></img>
+                        <img src={merchImg} alt="product"></img>
                         <input type="text" placeholder="Name" onChange={handleChange}/>
                         <input type="text" placeholder="Product Description" onChange={handleChange2}/>
                         <input type="number" placeholder="0" style={numStyle} onChange={handleChange3}/>
                         <div className="prod-btn">
                             <button className="btn" onClick={editClick}>Save</button>
-                    </div>
-                        {/* <img src={merchImg}></img>
-                        <h3>{merchName}</h3>
-                        <p>{merchDesc}</p>
-                        <p><b>${merchPrice}</b></p>
-                        <div className="prod-btn">
-                            <button className='btn'>Add to Cart</button>
-                        </div> */}
+                        </div>
                     </div> :
                     <div className="product-card">
                         <img src={merchImg}></img>
@@ -70,11 +77,10 @@ const Product = (props) => {
                         <p>{merchDesc}</p>
                         <p><b>${merchPrice}</b></p>
                         <div className="prod-btn">
-                            <button className='btn'>Add to Cart</button>
+                            <button className='btn' onClick={addClick}>Add to Cart</button>
                         </div>
                     </div> 
                     }
-                    
                 </>
         }
         </div>
